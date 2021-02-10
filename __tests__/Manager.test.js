@@ -8,7 +8,7 @@ describe("Manager", () => {
             expect("name" in manager).toEqual(true);
             expect("id" in manager).toEqual(true);
             expect("email" in manager).toEqual(true);
-            expect("officeNumbe" in manager).toEqual(true);
+            expect("officeNumber" in manager).toEqual(true);
         });
     });
 });
