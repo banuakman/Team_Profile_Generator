@@ -1,22 +1,38 @@
-# Team Profile Generator
+# Note Taker
+  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Your Task
+## Table of Contents
+- [Descriptions](#Description)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Contributers](#Contributers)
+- [Tests](#Tests)
+- [Questions](#Questions)
 
-Your task is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Testing is key to making code maintainable, so you’ll also write a unit test for every part of your code and ensure that it passes each test.
+## Description
+This is a Node.js command-line application that takes in information about employees in command line, then generates a responsive HTML webpage that displays summaries for each person.
 
-Because this application won’t be deployed, you’ll need to provide a link to a walkthrough video that demonstrates its functionality and all of the tests passing. You’ll need to submit a link to the video AND add it to the readme of your project.
+## Installation
 
-> **Note**: There is no starter code for this assignment.
+1. Be sure that "node.js" is installed to your local machine. (see <a href="https://nodejs.org/en/download/" rel="nofollow">offical website</a> for installation)
+2. Clone this repo and open that directory in terminal.
+3. Install npm packages by running 
+  ```bash
+  npm init -y-- npm install
+  ```
+4. Install jest package for tests by typing
+  ```bash
+  node i jest -D
+  ```
+5. Run the application by typing
+  ```bash
+  node index.js
+  ```
 
-## User Story
-
-```md
-AS A manager
-I WANT to generate a webpage that displays my team's basic info
-SO THAT I have quick access to their emails and GitHub profiles
-```
-
-## Acceptance Criteria
+## Usage
+The following video show the web application's appearance and functionality:
+![following the terminal prompts hmtl file is updated](./Assets/ScreenShot_NoteTaker.gif)
 
 ```md
 GIVEN a command-line application that accepts user input
@@ -38,78 +54,15 @@ WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 ```
 
-## Mock-Up
+## Contributers
+There were no other collaborators for this project.
 
-The following image shows a mock-up of the generated HTML’s appearance and functionality:
+## Tests
+There are built in tests in this application. Tests were run with the npm package "jest." 
+To run the tests;
+  ```bash
+  npm run test
+  ```
 
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/10-object-oriented-programming-homework-demo.png)
-
-The styling in the image is just an example, so feel free to add your own.
-
-## Getting Started
-
-This homework will combine many of the skills we've covered so far. In addition to the User Story and Acceptance Criteria, we’ve provided some guidelines to help get started.
-
-Your application should use [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
-
-```bash
-node index.js
-```
-
-It is recommended that you start with a directory structure that looks like the following example:
-
-```md
-__tests__/			// jest tests
-  Employee.test.js
-  Engineer.test.js
-  Intern.test.js
-  Manager.test.js
-dist/               // rendered output (HTML) and CSS style sheet
-lib/				// classes
-src/				// template helper code
-index.js			// runs the application
-```
-
-The application must include `Employee`, `Manager`, `Engineer`, and `Intern` classes. The tests for these classes (in the `_tests_` directory) must ALL pass.
-
-The first class is an `Employee` parent class with the following properties and methods:
-
-* `name`
-
-* `id`
-
-* `email`
-
-* `getName()`
-
-* `getId()`
-
-* `getEmail()`
-
-* `getRole()`&mdash;returns `'Employee'`
-
-The other three classes will extend `Employee`.
-
-In addition to `Employee`'s properties and methods, `Manager` will also have the following:
-
-* `officeNumber`
-
-* `getRole()`&mdash;overridden to return `'Manager'`
-
-In addition to `Employee`'s properties and methods, `Engineer` will also have the following:
-
-* `github`&mdash;GitHub username
-
-* `getGithub()`
-
-* `getRole()`&mdash;overridden to return `'Engineer'`
-
-In addition to `Employee`'s properties and methods, `Intern` will also have the following:
-
-* `school`
-
-* `getSchool()`
-
-* `getRole()`&mdash;overridden to return `'Intern'`
-
-Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.
+## Questions
+If you have any questions, please send an email to banu@breative.net or reach me through https://github.com/banuakman
