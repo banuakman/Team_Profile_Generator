@@ -10,29 +10,53 @@ const Manager = require("./lib/Manager");
 let teamMember = [];
 
 // questions to user
-const questions = [
-    // Employee Q's
-    // Type of Employee - Manager/Engineer/Intern
     // Manager Q's
-    // Engineer Q's
-    // Intern Q's
+const ManagerQs = [
+  {
+    type: "input",
+    message: "What is the managers name?",
+    name: "name",
+  },
+  {
+    type: "input",
+    message: "What is the managers employee id?",
+    name: "id",
+  },
+  {
+    type: "input",
+    message: "What is the managers email?",
+    name: "email",
+  },
+  {
+    type: "input",
+    message: "What is the managers office number?",
+    name: "officeNumber",
+  },
 ]
 
+    // Add a new Employee - Engineer/Intern
+    // Engineer Q's
+    // Intern Q's
+
+
 // FUNCTIONS ==================================
+//
 
 // USER INTERACTIONS ==========================
 
 // Prompt the user to get answers to questions.
 inquirer
-  .prompt(questions)
-  // Write a ReadMe file using the amswers to the prompts.
+  .prompt(ManagerQs)
+  // Write Manager to teamMember[] and ask to add New Employee
   .then(userResponse => {
-    writeUserInfo(userResponse);
+  console.log(userResponse)
   })
   // If there is an error, write an error to the console.
   .catch(err => {
     console.error(err);
   })
+
+// ALTERNATIVE  
 // function init() {
 //     inquirer
 //     .prompt(questions)
